@@ -11,12 +11,9 @@ const db = {};
 
 
 const sequelize = new Sequelize(`${config.url}?sslmode=no-verify`, config);
-// console.log('Config Area');
 // let sequelize;
 // if (config.url) {
 //   // sequelize = new Sequelize(process.env[config.use_env_variable], config);
-//   const sequelize = new Sequelize(`${config.url}`, config);
-
 // } else {
 //   sequelize = new Sequelize(config.database, config.username, config.password, config);
 // }
