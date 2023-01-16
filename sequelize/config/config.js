@@ -1,23 +1,34 @@
+require('dotenv').config({path: __dirname + '/../../.env'})
+
+const {DATABASE_URL} = process.env
+// console.log(DATABASE_URL);
+
 module.exports = {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "url": DATABASE_URL,
+    "dialect": 'postgres',
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": false,
+      },
+    },
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "url": '127.0.0.1',
+    "dialect": 'postgres',
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": false,
+      },
+    },
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "url": DATABASE_URL,
+    "dialect": 'postgres',
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": false,
+      },
+    },
   }
 }
