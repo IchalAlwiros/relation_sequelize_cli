@@ -16,8 +16,11 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
 
-// Connection
+// Router
+require('./router')(app)
 
+
+// Connection
 const connectDb = async () => {
     console.log('Checking database connection...');
 
@@ -32,11 +35,11 @@ const connectDb = async () => {
 
 // PORT
 const PORT = process.env.PORT || 3000
-( async () => {
-    await connectDb();
-    console.log(`Attepting to run server on port ${PORT}`);
-    app.listen(PORT, () => {
-        console.log(`Listen Port ${PORT}`);
-    })
-}
-)
+// ( async () => {
+//     console.log(`Attepting to run server on port ${PORT}`);
+// }
+// )
+connectDb();
+app.listen(PORT, () => {
+    console.log(`Listen Port ${PORT}`);
+})

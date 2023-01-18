@@ -12,7 +12,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    await queryInterface.bulkInsert('User', [
+    await queryInterface.bulkInsert('users', [
       {
         username: 'superuser',
         email: 'superuser@gmail.com',
@@ -20,7 +20,7 @@ module.exports = {
         password: 'password',
         createdBy: 0,
         createdAt: new Date(),
-        updatedBy: 0,
+        updateBy: 0,
         updatedAt: new Date(),
         isDeleted: false
       },
@@ -31,7 +31,7 @@ module.exports = {
         password: 'password',
         createdBy: 0,
         createdAt: new Date(),
-        updatedBy: 0,
+        updateBy: 0,
         updatedAt: new Date(),
         isDeleted: false
       },
@@ -42,7 +42,7 @@ module.exports = {
         password: 'password',
         createdBy: 0,
         createdAt: new Date(),
-        updatedBy: 0,
+        updateBy: 0,
         updatedAt: new Date(),
         isDeleted: false
       },
