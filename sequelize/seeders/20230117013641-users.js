@@ -12,41 +12,41 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    await queryInterface.bulkInsert('users', [
-      {
-        username: 'superuser',
-        email: 'superuser@gmail.com',
-        fullname: 'superuser',
-        password: 'password',
-        createdBy: 0,
-        createdAt: new Date(),
-        updateBy: 0,
-        updatedAt: new Date(),
-        isDeleted: false
-      },
-      {
-        username: 'admin',
-        email: 'admin@gmail.com',
-        fullname: 'admin',
-        password: 'password',
-        createdBy: 0,
-        createdAt: new Date(),
-        updateBy: 0,
-        updatedAt: new Date(),
-        isDeleted: false
-      },
-      {
-        username: 'tester',
-        email: 'tester@gmail.com',
-        fullname: 'tester',
-        password: 'password',
-        createdBy: 0,
-        createdAt: new Date(),
-        updateBy: 0,
-        updatedAt: new Date(),
-        isDeleted: false
-      },
-  ])
+  //   await queryInterface.bulkInsert('users', [
+  //     {
+  //       username: 'superuser',
+  //       email: 'superuser@gmail.com',
+  //       fullname: 'superuser',
+  //       password: 'password',
+  //       createdBy: 0,
+  //       createdAt: new Date(),
+  //       updateBy: 0,
+  //       updatedAt: new Date(),
+  //       isDeleted: false
+  //     },
+  //     {
+  //       username: 'admin',
+  //       email: 'admin@gmail.com',
+  //       fullname: 'admin',
+  //       password: 'password',
+  //       createdBy: 0,
+  //       createdAt: new Date(),
+  //       updateBy: 0,
+  //       updatedAt: new Date(),
+  //       isDeleted: false
+  //     },
+  //     {
+  //       username: 'tester',
+  //       email: 'tester@gmail.com',
+  //       fullname: 'tester',
+  //       password: 'password',
+  //       createdBy: 0,
+  //       createdAt: new Date(),
+  //       updateBy: 0,
+  //       updatedAt: new Date(),
+  //       isDeleted: false
+  //     },
+  // ])
   },
 
   async down (queryInterface, Sequelize) {
